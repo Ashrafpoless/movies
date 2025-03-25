@@ -1,0 +1,12 @@
+.Missing {
+    width: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.Missing h2,
+.Missing p {
+    margin-bottom: 1rem;
+}
