@@ -21,7 +21,7 @@ export const getPopularMovies = async (endpoint, page) => {
 export const searchMovies = async (query) => {
     try {
         const res = await axios.get(
-            `${import.meta.env.VITE_API_URL}/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${encodeURIComponent(query)}`,
+            `${import.meta.env.VITE_API_URL}/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${encodeURIComponent(query)}` ,
             {
                 headers: {
                     Authorization:
@@ -42,6 +42,26 @@ export const searchShow = async (query) => {
     try {
         const res = await axios.get(
             `${import.meta.env.VITE_API_URL}/search/tv?api_key=${import.meta.env.VITE_API_KEY}&query=${encodeURIComponent(query)}`,
+            {
+                headers: {
+                    Authorization:
+                        'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzOTk0MGE0NTdjNWE1MjBmZmYzNTMyZGE3YWM1OWE0OSIsIm5iZiI6MTc0MjU3NTg5MS4zODEsInN1YiI6IjY3ZGQ5OTEzYzI4NDA0ZTYyOWY1NTE1MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dCVIZG68shU9Dc_psXVaKspsDitzagsg1urAp4MvbiA',
+                    accept: 'application/json'
+                }
+            }
+        );
+
+        return res.data.results;
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+
+export const searchPerson = async (query) => {
+    try {
+        const res = await axios.get(
+            `${import.meta.env.VITE_API_URL}/search/person?api_key=${import.meta.env.VITE_API_KEY}&query=${encodeURIComponent(query)}`,
             {
                 headers: {
                     Authorization:
