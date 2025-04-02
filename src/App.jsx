@@ -1,19 +1,18 @@
-// import { useState } from 'react'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MovieProvider } from './context/movieContext';
-// components
+// components & pages
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
-import Missing from './components/Missing/Missing';
-import Favorites from './pages/Favorites/Favorites';
-
-import './App.css';
 import About from './pages/About/About';
 import Popular from './pages/Popular/Popular';
 import TopRated from './pages/TopRated/TopRated';
 import TVShow from './pages/TVShow/TVShow';
 import Person from './pages/Person/Person';
+import Favorites from './pages/Favorites/Favorites';
+import Missing from './components/Missing/Missing';
+
+import './App.css';
 
 function App() {
     const Router = createBrowserRouter([
