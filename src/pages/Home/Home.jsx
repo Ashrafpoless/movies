@@ -20,9 +20,10 @@ const Home = () => {
     useEffect(() => {
         const loadPopularMovies = async () => {
             try {
-                const popularMovies = await getPopularMovies('movie/upcoming', page);
-                setMovies(popularMovies);
-                setNumberOfPages(popularMovies.total_pages);
+                const upcomingMovies = await getPopularMovies('movie/upcoming', page);
+                setMovies(upcomingMovies);
+                setNumberOfPages(upcomingMovies.total_pages);
+                
             } catch (error) {
                 console.error(error);
                 setError(error.message);
@@ -33,7 +34,7 @@ const Home = () => {
 
         loadPopularMovies();
     }, [page]);
-
+    
     const handleSearch = async (e) => {
         e.preventDefault();
         if(!search.trim()) return;
@@ -44,14 +45,15 @@ const Home = () => {
             setMovies(searchResult);
             setError(null);
         } catch (err) {
-          console.log(err.message)
-          setError(err.message);
-
+            console.log(err.message)
+            setError(err.message);
+            
         }finally{
-          setLoading(false);
+            setLoading(false);
         }
     };
-
+    
+    console.log(movies)
    // **************** Pagination ****************
     
    const prePage = ()=>{

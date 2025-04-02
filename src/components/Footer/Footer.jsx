@@ -7,7 +7,7 @@ const Footer = () => {
         <p>  &copy; {today.getFullYear()} Ashraf Poless.   <span>All Rights Reserved</span> </p>
             <ul >
                 <li>
-                    <a target='_blank' href='https://github.com/Ashrafpoless'>GItHub</a>
+                    <a target='_blank' href='https://github.com/Ashrafpoless'>GitHub</a>
                 </li>
                 <li>
                     <a target='_blank' href='https://www.linkedin.com/in/ashraf-poless-034349317/'>LinkedIn</a>
