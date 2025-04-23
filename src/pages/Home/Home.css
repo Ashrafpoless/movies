@@ -3,6 +3,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 1px auto;
+    min-height: 90vh;
   }
   
   .search-form {
