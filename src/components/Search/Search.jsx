@@ -1,5 +1,4 @@
 
-
 import './Search.css'
 
 const Search = ({setMovies, loading, setLoading, setError, search, setSearch, searchFun}) => {
