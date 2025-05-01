@@ -4,6 +4,7 @@ import { getPopularMovies, searchMovies } from '../../Api/moviesApi';
 
 import MovieCard from '../../components/MovieCard/MovieCard';
 import Loading from '../../components/Loading/Loading';
+import Search from '../../components/Search/Search';
 
 import './TopRated.css'
 const TopRated = () => {
@@ -13,8 +14,6 @@ const TopRated = () => {
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [numberOfPages, setNumberOfPages] = useState(null)
-
-    //const movies = getPopularMovies();
 
     useEffect(() => {
         const loadPopularMovies = async () => {
@@ -33,23 +32,8 @@ const TopRated = () => {
         loadPopularMovies();
     }, [page]);
 
-    const handleSearch = async (e) => {
-        e.preventDefault();
-        if(!search.trim()) return;
-        if(loading) return;
-        setLoading(true);
-        try {
-            const searchResult = await searchMovies(search);
-            setMovies(searchResult);
-            setError(null);
-        } catch (err) {
-          console.log(err.message)
-          setError(err.message);
-
-        }finally{
-          setLoading(false);
-        }
-    };
+   
+    
 
     // **************** Pagination ****************
     
@@ -72,18 +56,10 @@ const TopRated = () => {
     // ****************The End of Pagination ****************
     return (
         <div className="home">
-           <form onSubmit={handleSearch} className="search-form">
-                        <input
-                            type="text"
-                            className="search-input"
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                            placeholder="Search for movies..."
-                        />
-                        <button type="submit" className="search-button">
-                            Search
-                        </button>
-                    </form>
+          
+          <Search setMovies={setMovies} loading={loading} setLoading={setLoading} setError={setError} search={search} setSearch={setSearch} searchFun={searchMovies}/>
+          
+
             {error && <div  className="error-message">Error: {error}</div>}
             {loading ? (
                 <Loading/>
