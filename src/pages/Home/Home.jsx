@@ -59,9 +59,13 @@ const nextPage = () => {
 // ****************The End of Pagination ****************
 
     return (
+        <>
+            <section className='search_section'>
+                <h1>Welcome.</h1>
+                <p>Millions of movies, TV shows and people to discover. Explore now.</p>
+                <Search className="search_box" setMovies={setMovies} loading={loading} setLoading={setLoading} setError={setError} search={search} setSearch={setSearch} searchFun={searchMovies}/>
+            </section>
         <div className="home">
-            
-            <Search setMovies={setMovies} loading={loading} setLoading={setLoading} setError={setError} search={search} setSearch={setSearch} searchFun={searchMovies}/>
 
           
             {error && <div  className="error-message">Error: {error}</div>}
@@ -96,6 +100,7 @@ const nextPage = () => {
                 </nav>
             </div>
         </div>
+        </>
     );
 };
 

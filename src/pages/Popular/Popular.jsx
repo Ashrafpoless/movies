@@ -55,7 +55,7 @@ const Popular = () => {
     
     // ****************The End of Pagination ****************
         return (
-            <div className="home">
+            <div className="popular">
                
           <Search setMovies={setMovies} loading={loading} setLoading={setLoading} setError={setError} search={search} setSearch={setSearch} searchFun={searchMovies}/>
                

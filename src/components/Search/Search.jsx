@@ -29,7 +29,7 @@ const Search = ({setMovies, loading, setLoading, setError, search, setSearch, se
                 className="search-input"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search for movies..."
+                placeholder="Search ..."
             />
             <button type="submit" className="search-button">
                 Search

@@ -59,7 +59,7 @@ const nextPage = () => {
 // ****************The End of Pagination ****************
 
     return (
-        <div className="home">
+        <div className="person">
           
           <Search setMovies={setMovies} loading={loading} setLoading={setLoading} setError={setError} search={search} setSearch={setSearch} searchFun={searchPerson}/>
 
