@@ -1,8 +1,9 @@
 .favorites {
-    padding: 2rem;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 60vh;
+  padding: 2rem 3rem;
+  width: 95%;
+  box-sizing: border-box;
+  margin: auto;
+  min-height: 90vh;
   }
   
   .favorites h2 {
