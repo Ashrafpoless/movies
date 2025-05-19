@@ -7,6 +7,8 @@ import Search from '../../components/Search/Search';
 
 import './Home.css';
 
+import backgroundImg from '../../assets/home_background.png';
+
 const Home = () => {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
@@ -60,7 +62,9 @@ const nextPage = () => {
 
     return (
         <>
-            <section className='search_section'>
+            <section className='search_section' style={ {
+  backgroundImage: `url(${backgroundImg})`,
+}}>
                 <h1>Welcome.</h1>
                 <p>Millions of movies, TV shows and people to discover. Explore now.</p>
                 <Search className="search_box" setMovies={setMovies} loading={loading} setLoading={setLoading} setError={setError} search={search} setSearch={setSearch} searchFun={searchMovies}/>
