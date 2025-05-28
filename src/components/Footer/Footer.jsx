@@ -13,7 +13,7 @@ const Footer = () => {
                     <a target='_blank' href='https://www.linkedin.com/in/ashraf-poless-034349317/'>LinkedIn</a>
                 </li>
                 <li>
-                    <a target='_blank' href='https://ashrafpoless.vercel.app'>Portfolio</a>
+                    <a target='_blank' href='https://ashraf-poless.vercel.app/portfolio'>Portfolio</a>
                 </li>
             </ul>
     </footer>
